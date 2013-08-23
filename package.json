@@ -1,9 +1,9 @@
 {
-  "name": "lifeplus-express",
+  "name": "flaming-expresso",
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node app.js"
+    "start": "coffee app.coffee.md"
   },
   "dependencies": {
     "express": "3.3.5",
