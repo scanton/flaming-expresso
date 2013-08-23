@@ -1,4 +1,4 @@
-#app.litcoffee
+#app.coffee.md
 An [express](http://expressjs.com/) based 
 [Literate CoffeeScript](http://coffeescript.org/) ([litCoffee](http://litcoffee.org/)) application
 
