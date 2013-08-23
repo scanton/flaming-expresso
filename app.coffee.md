@@ -15,27 +15,31 @@ in this same root directory
 
 	express = require 'express'
 
-##Config
-This will allow us to store basic configuration details, like
-database connections, or WSDLs based on the specific environment
-(e.g. 'development', 'production', 'staging', etc.)
-
-	config = require('./config.json')[app.get('env')]
-
 Routes allows us to map the URL into a handled request
 
 	routes = require './routes'
 	user = require './routes/user'
 
+##HTTP
 Http provides http protocol api
 
 	http = require 'http'
+
+##Path
+
 	path = require 'path'
 
 #app
 app is our reference to the webserver
 
 	app = express()
+
+##Config
+This will allow us to store basic configuration details, like
+database connections, or WSDLs based on the specific environment
+(e.g. 'development', 'production', 'staging', etc.)
+
+	config = require('./config.json')[app.get('env')]
 
 ##Port(set)
 If no environment variable *PORT* is defined, then we listen
@@ -56,6 +60,7 @@ this application.
 
 	app.set 'view engine', 'jade'
 
+##Web Basics
 Instruct the app to use some basic webserver functionality
 
 	app.use express.favicon()
@@ -85,6 +90,7 @@ used in this application.
 	app.use require('stylus').middleware __dirname + '/public'
 	app.use express.static path.join __dirname, 'public'
 
+##Error Handling
 If we are in the development environment, then we enable error handling
 
 	if 'development' == app.get('env')
