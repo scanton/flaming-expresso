@@ -15,6 +15,13 @@ in this same root directory
 
 	express = require 'express'
 
+##Config
+This will allow us to store basic configuration details, like
+database connections, or WSDLs based on the specific environment
+(e.g. 'development', 'production', 'staging', etc.)
+
+	config = require('./config.json')[app.get('env')]
+
 Routes allows us to map the URL into a handled request
 
 	routes = require './routes'
@@ -92,13 +99,6 @@ If we are in the development environment, then we enable error handling
 Get the port number the application will be listening to
 
 	port = app.get 'port'
-
-##Config
-This will allow us to store basic configuration details, like
-database connections, or WSDLs based on the specific environment
-(e.g. 'development', 'production', 'staging', etc.)
-
-	config = require('./config.json')[app.get('env')]
 
 #CreateServer
 Construct the http server by passing a reference to the app then
