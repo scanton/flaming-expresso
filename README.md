@@ -1,4 +1,4 @@
-FlamingExpresso ![litCoffee Logo](https://github.com/scanton/flaming-expresso/blob/master/public/images/litCoffee-icon.png?raw=true)
+![litCoffee Logo](https://github.com/scanton/flaming-expresso/blob/master/public/images/litCoffee-icon.png?raw=true) FlamingExpresso
 ===============
 
 This is an example CMS written in Literate CoffeeScript (litCoffee).
