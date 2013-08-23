@@ -6,8 +6,8 @@
   },
 
   "production": {
-    "db_host": "192.168.1.9",
-    "db_user": "myappdb",
-    "db_pass": "!p4ssw0rd#"
+    "db_host": "dbhost",
+    "db_user": "dbuser",
+    "db_pass": "d69455"
   }
 }
