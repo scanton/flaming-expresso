@@ -96,11 +96,6 @@ If we are in the development environment, then we enable error handling
 	if 'development' == app.get('env')
 		app.use express.errorHandler()
 
-##Routs
-	
-	app.get '/', routes.index
-	app.get '/users', user.list
-
 ##Port(get)
 Get the port number the application will be listening to
 
