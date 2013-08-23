@@ -15,11 +15,6 @@ in this same root directory
 
 	express = require 'express'
 
-Routes allows us to map the URL into a handled request
-
-	routes = require './routes'
-	user = require './routes/user'
-
 ##HTTP
 Http provides http protocol api
 
