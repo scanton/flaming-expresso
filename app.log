@@ -1,0 +1,10 @@
+Sun, 25 Aug 2013 04:05:25 GMT 127.0.0.1 GET / 200
+Sun, 25 Aug 2013 04:05:25 GMT 127.0.0.1 GET /javascripts/socket.io.js 304
+Sun, 25 Aug 2013 04:05:25 GMT 127.0.0.1 GET /javascripts/main.js 304
+Sun, 25 Aug 2013 04:05:25 GMT 127.0.0.1 GET /stylesheets/style.css 200
+Sun, 25 Aug 2013 04:05:25 GMT 127.0.0.1 GET /images/litCoffee-icon.png 304
+Sun, 25 Aug 2013 04:08:28 GMT 127.0.0.1 GET / 200
+Sun, 25 Aug 2013 04:08:28 GMT 127.0.0.1 GET /javascripts/socket.io.js 304
+Sun, 25 Aug 2013 04:08:28 GMT 127.0.0.1 GET /javascripts/main.js 304
+Sun, 25 Aug 2013 04:08:28 GMT 127.0.0.1 GET /stylesheets/style.css 304
+Sun, 25 Aug 2013 04:08:28 GMT 127.0.0.1 GET /images/litCoffee-icon.png 304

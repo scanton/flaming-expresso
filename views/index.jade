@@ -1,0 +1,29 @@
+!!! 5
+html
+	head
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		title #{title}
+		script(src='http://code.jquery.com/jquery-1.10.0.min.js')
+		script(src='javascripts/socket.io.js')
+		script(src='javascripts/main.js')
+		link(rel='stylesheet', href='stylesheets/style.css')
+	body
+		#logo
+			h1 #{title}
+			p #{tagline} 
+				img(src='images/litCoffee-icon.png')
+		#authenticate
+			p Your Chat Name:
+			form#login-form
+				p 
+					input(type='text', name='username')
+				p.submit
+					input(type='submit')
+		.clear		
+		#chat(style='display: none;')
+			#chat-history
+			form#chat-input-form
+				p Chat:
+					input#chat-input(type='text', name='chat', action="#")
+				p
+					input#chat-submit(type='submit')

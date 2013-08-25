@@ -7,25 +7,32 @@ This is the *main* application bootstrapping file that sets
 up the web server and defines routes.
 
 ####Include external packages
-	
+
 external package requirements are defined in package.json
 in this same root directory
-
-[Express](http://expressjs.com/) is our web server
-
-	express = require 'express'
 
 ##HTTP
 Http provides http protocol api
 
 	http = require 'http'
 
+##Express (web server)
+[Express](http://expressjs.com/) is our web server
+
+	express = require 'express'
+
+##File System
+We're going to need file system access to write server logs to
+
+	fs = require 'fs'
+
 ##Path
+This library helps us work with file system paths
 
 	path = require 'path'
 
 #app
-app is our reference to the webserver
+**app** is our reference to the webserver
 
 	app = express()
 
@@ -60,9 +67,16 @@ Instruct the app to use some basic webserver functionality
 
 	app.use express.favicon()
 	app.use express.responseTime()
-	app.use express.logger 'dev'
 	app.use express.bodyParser()
 	app.use express.methodOverride()
+
+##Logging
+We use Express' logger to write server logs to a file 'app.log' in
+the root directory of this application.
+
+	app.use express.logger
+		format: ':date :remote-addr :method :url :status'
+		stream: fs.createWriteStream 'app.log', 'flags': 'w'
 
 ##cookies
 	app.use express.cookieParser 'cookie secret here'
@@ -83,6 +97,14 @@ Register Stylus as the style middleware
 used in this application.
 
 	app.use require('stylus').middleware __dirname + '/public'
+
+##Static 'public' directory
+We're going to expose files that need to be served to the browser
+(e.g. images, styleseets and javascripts) in a public folder
+
+This prevents our application code (server-side litCoffee) from being
+viewable from the web.
+
 	app.use express.static path.join __dirname, 'public'
 
 ##Error Handling
@@ -91,8 +113,20 @@ If we are in the development environment, then we enable error handling
 	if 'development' == app.get('env')
 		app.use express.errorHandler()
 
+##Route all requests to 'index'
+This is where we declare routes for our router to use.  In our case,
+we're going to handle application routing seperately from the main router.
+So we set this rule to respond to all GET HTTP requests by rendring the
+index:
+	
+	app.get '/', (req, res) ->
+		res.render 'index',
+			title: config.title
+			tagline: config.tagline
+
 ##Port(get)
-Get the port number the application will be listening to
+Get the port number the application will be listening to (this was set in
+[Port(set)](#portset) above)
 
 	port = app.get 'port'
 
@@ -100,5 +134,33 @@ Get the port number the application will be listening to
 Construct the http server by passing a reference to the app then
 register for listen events on that port.
 
-	http.createServer(app).listen port, ->
+	server = http.createServer(app).listen port, ->
 		console.log "Express server listening on port #{port}"
+
+#Web Sockets (socket.io)
+We're going to use socket.io as our socket server.  We pass a
+reference to our existing 'server', meaning socket.io will be able
+to respond to socket oriented HTTP requests on the same port as the
+web server.
+
+	io = require('socket.io').listen server
+
+###Socket events
+We then register to listen for the *connection* event and define our
+event handlers for an individual socket
+
+	io.sockets.on 'connection', (socket) ->
+		soc = socket
+		d = new Date();
+		soc.emit 'onConnect', 
+			message: 'Connected to FlamingExpresso'
+			date: d.toString()
+			time: d.getTime()
+		soc.on 'onConnect', (data) ->
+			console.log data
+		soc.on 'onChat', (data) ->
+			data.username = soc.username
+			io.sockets.emit 'updateChat', data
+		soc.on 'setName', (data) ->
+			socket.username = data.message
+			io.sockets.emit 'newUser', data
