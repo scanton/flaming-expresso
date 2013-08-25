@@ -1,8 +1,8 @@
-#main-client.coffee.md
+#main-client.coffee.md ![litCoffee Logo](https://raw.github.com/scanton/flaming-expresso/master/public/images/litCoffee-icon.png)
 This is the main application bootstraping on the client side.
 
 ##socket
-We start by defining our web sociket connection *socket*.  This URL should
+We start by defining our web socket connection *socket*.  This URL should
 be edited to match the location/port of your FlamingExpresso server.
 
 	socket = io.connect('http://localhost:3000')
