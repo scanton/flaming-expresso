@@ -22,7 +22,7 @@ Http provides http protocol api
 	express = require 'express'
 
 ##File System
-We're going to need file system access to write server logs to
+We're going to need file system access to write server logs
 
 	fs = require 'fs'
 
@@ -153,7 +153,7 @@ event handlers for an individual socket
 		soc = socket
 		d = new Date();
 		soc.emit 'onConnect', 
-			message: 'Connected to FlamingExpresso'
+			message: "Connected to #{config.title}"
 			date: d.toString()
 			time: d.getTime()
 		soc.on 'onConnect', (data) ->
