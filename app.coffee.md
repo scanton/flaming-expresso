@@ -2,7 +2,7 @@
 An [express](http://expressjs.com/) based 
 [Literate CoffeeScript](http://coffeescript.org/) ([litCoffee](http://litcoffee.org/)) application
 
-##main(bootstrap)
+##main (bootstrap) (*SERVER*)
 This is the *main* application bootstrapping file that sets
 up the web server and defines routes.
 
