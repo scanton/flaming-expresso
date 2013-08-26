@@ -1,6 +1,4 @@
 #app.coffee.md ![litCoffee Logo](https://raw.github.com/scanton/flaming-expresso/master/public/images/litCoffee-icon.png)
-An [express](http://expressjs.com/) based 
-[Literate CoffeeScript](http://coffeescript.org/) ([litCoffee](http://litcoffee.org/)) application
 
 ##main (bootstrap) **SERVER**
 This is the *main* application bootstrapping file that sets
