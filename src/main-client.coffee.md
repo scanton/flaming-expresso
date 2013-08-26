@@ -6,7 +6,7 @@ This is the main application bootstraping on the client side.
 We start by defining our web socket connection *socket*.  This URL should
 be edited to match the location/port of your FlamingExpresso server.
 
-	socket = io.connect('http://localhost:3000')
+	socket = io.connect 'http://localhost:3000'
 
 ##helper functions
 These are a few utility functons that are used later in this file:
@@ -105,7 +105,7 @@ including the client sending the message.
 
 		$("#chat-input-form").submit (e) ->
 			e.preventDefault()
-			$chatInput = $("#chat-input")
+			$chatInput = $ "#chat-input"
 			message = $chatInput.val()
 			$chatInput.val ''
 			socket.emit 'onChat', wrapMessage(message)
