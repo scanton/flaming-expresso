@@ -3,3 +3,8 @@ Sun, 25 Aug 2013 20:37:58 GMT 127.0.0.1 GET /javascripts/socket.io.js 304
 Sun, 25 Aug 2013 20:37:58 GMT 127.0.0.1 GET /javascripts/main-client.js 200
 Sun, 25 Aug 2013 20:37:58 GMT 127.0.0.1 GET /stylesheets/style.css 200
 Sun, 25 Aug 2013 20:37:59 GMT 127.0.0.1 GET /images/litCoffee-icon.png 304
+Mon, 26 Aug 2013 01:37:06 GMT 127.0.0.1 GET /?username=satori&codekitCB=399155747.377832 200
+Mon, 26 Aug 2013 01:37:06 GMT 127.0.0.1 GET /javascripts/socket.io.js 304
+Mon, 26 Aug 2013 01:37:06 GMT 127.0.0.1 GET /javascripts/main-client.js 304
+Mon, 26 Aug 2013 01:37:06 GMT 127.0.0.1 GET /stylesheets/style.css 304
+Mon, 26 Aug 2013 01:37:06 GMT 127.0.0.1 GET /images/litCoffee-icon.png 304
