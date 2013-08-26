@@ -3,7 +3,7 @@ FlamingExpresso written in ![litCoffee Logo](https://raw.github.com/scanton/flam
 An [express](http://expressjs.com/) based 
 [Literate CoffeeScript](http://coffeescript.org/) ([litCoffee](http://litcoffee.org/)) application
 ```coffeescript
-  console.log 'FlamingExpresso - an Express server and CMS written in litCoffee'
+  console.log 'FlamingExpresso - a litCoffee Express and Socket.io server'
 ```
 Express Server
 --------------
