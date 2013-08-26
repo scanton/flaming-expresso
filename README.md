@@ -1,9 +1,8 @@
 FlamingExpresso written in ![litCoffee Logo](https://raw.github.com/scanton/flaming-expresso/master/public/images/litCoffee-icon-horiz.png)
 ===============
-An [express](http://expressjs.com/) and [socket.io](http://socket.io) based 
-[Literate CoffeeScript](http://coffeescript.org/) ([litCoffee](http://litcoffee.org/)) application
+
+A [litCoffee](http://litcoffee.org/) [express](http://expressjs.com/) and [socket.io](http://socket.io) based server
+written in [Literate CoffeeScript](http://coffeescript.org/)
 ```coffeescript
-  console.log 'FlamingExpresso - a litCoffee Express and Socket.io server'
+  console.log 'FlamingExpresso - a litCoffee Express/Socket.io server'
 ```
-Express Server
---------------
