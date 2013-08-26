@@ -1,5 +1,5 @@
 #main-client.coffee.md ![litCoffee Logo](https://raw.github.com/scanton/flaming-expresso/master/public/images/litCoffee-icon.png)
-##main (bootstrap) (*CLIENT*)
+##main (bootstrap) **CLIENT**
 This is the main application bootstraping on the client side.
 
 ##socket
