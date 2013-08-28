@@ -111,22 +111,35 @@ If we are in the development environment, then we enable error handling
 	if 'development' == app.get('env')
 		app.use express.errorHandler()
 
-##Route all requests to 'index'
-This is where we declare routes for our router to use.  In our case,
-we're going to handle application routing seperately from the main router.
-So we set this rule to respond to all GET HTTP requests by rendring the
-index:
-	
-	app.get '/', (req, res) ->
-		res.render 'index',
-			title: config.title
-			tagline: config.tagline
-
 ##Port(get)
 Get the port number the application will be listening to (this was set in
 [Port(set)](#portset) above)
 
 	port = app.get 'port'
+
+##Respond to all requests (no 404)
+This is where we declare routes for our router to use.  In our case,
+we're going to handle application routing seperately from the main router.
+	
+	#app.get '/', (req, res) ->
+	#	res.render 'index',
+	#		title: config.title
+	#		tagline: config.tagline
+
+####Custom Routing
+After declaring our normal Routs (which we have none), using the express
+Router, we handle all 404s (any request that hasn't already resolved to
+a static file or otherwised caused the server to respond, such as an error).
+
+	app.use (req, res, next) ->
+		RouteUtils = require __dirname + '/src/RouteUtils'
+		RegExLibrary = require __dirname + '/src/RegExLibrary'
+		ProxyServiceAdapter = require __dirname + '/src/ProxyServiceAdapter'
+		ru = new RouteUtils(req, RegExLibrary, ProxyServiceAdapter)
+
+		res.render 'index',
+			title: config.title
+			tagline: config.tagline
 
 #CreateServer
 Construct the http server by passing a reference to the app then

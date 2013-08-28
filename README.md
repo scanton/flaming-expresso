@@ -6,3 +6,6 @@ written in [Literate CoffeeScript](http://coffeescript.org/)
 ```coffeescript
   console.log 'FlamingExpresso - a litCoffee Express/Socket.io server'
 ```
+
+###How to run coffee under [node-inspector](https://github.com/node-inspector/node-inspector):
+	coffee --nodejs --debug app.coffee.md

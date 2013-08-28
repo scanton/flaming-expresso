@@ -1,4 +1,4 @@
-#main-client.coffee.md ![litCoffee Logo](https://raw.github.com/scanton/flaming-expresso/master/public/images/litCoffee-icon.png)
+#app-client.coffee.md ![litCoffee Logo](https://raw.github.com/scanton/flaming-expresso/master/public/images/litCoffee-icon.png)
 ##main (bootstrap) **CLIENT**
 This is the main application bootstraping on the client side.
 
@@ -74,8 +74,9 @@ form and display the chat views.
 			$("#chat-input").focus()
 
 #jQuery
-*$ ->* is the jQuery $(document).ready() event handler.  When the document has
-fully loaded, this code will be executed in the browsser.
+*$ ->* is the jQuery **$(document).ready()** event handler.  When the document has
+fully loaded (images and other assets may not have loaded yet, but the document has)
+this code will be executed in the browser.
 
 	$ ->
 
