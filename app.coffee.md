@@ -154,24 +154,25 @@ reference to our existing 'server', meaning socket.io will be able
 to respond to socket oriented HTTP requests on the same port as the
 web server.
 
-	io = require('socket.io').listen server
+	if false
+		io = require('socket.io').listen server
 
 ###Socket events
 We then register to listen for the *connection* event and define our
 event handlers for an individual socket
 
-	io.sockets.on 'connection', (socket) ->
-		soc = socket
-		d = new Date();
-		soc.emit 'onConnect', 
-			message: "Connected to #{config.title}"
-			date: d.toString()
-			time: d.getTime()
-		soc.on 'onConnect', (data) ->
-			console.log data
-		soc.on 'onChat', (data) ->
-			data.username = soc.username
-			io.sockets.emit 'updateChat', data
-		soc.on 'setName', (data) ->
-			socket.username = data.message
-			io.sockets.emit 'newUser', data
+		io.sockets.on 'connection', (socket) ->
+			soc = socket
+			d = new Date();
+			soc.emit 'onConnect', 
+				message: "Connected to #{config.title}"
+				date: d.toString()
+				time: d.getTime()
+			soc.on 'onConnect', (data) ->
+				console.log data
+			soc.on 'onChat', (data) ->
+				data.username = soc.username
+				io.sockets.emit 'updateChat', data
+			soc.on 'setName', (data) ->
+				socket.username = data.message
+				io.sockets.emit 'newUser', data

@@ -26,4 +26,4 @@ strings greater than two characters and no longer than 255 characters,
 seperated by a dash '-'.  This format matches a the page controller
 data parameters.
 
-		@controller: /^[a-z]{3, 255}-[a-z]{3, 255}$/
+		@controller: /^[a-z]{3,255}-[a-z]{3,255}$/
