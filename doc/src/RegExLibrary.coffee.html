@@ -1,0 +1,36 @@
+<!DOCTYPE html><html lang="en"><head><title>src/RegExLibrary.coffee</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../"><meta name="groc-document-path" content="src/RegExLibrary.coffee"><meta name="groc-project-path" content="src/RegExLibrary.coffee.md"><link rel="stylesheet" type="text/css" media="all" href="../assets/style.css"><script type="text/javascript" src="../assets/behavior.js"></script><body><div id="meta"><div class="file-path">src/RegExLibrary.coffee.md</div></div><div id="document"><div class="segment"><div class="comments"><div class="wrapper"><h1 id="regexlibraryclasslitcoffeelogohttpsrawgithubcomscantonflamingexpressomasterpublicimageslitcoffeeiconpng">RegExLibrary (class) <img src="https://raw.github.com/scanton/flaming-expresso/master/public/images/litCoffee-icon.png" alt="litCoffee Logo" title="" /></h1>
+
+<p>This is just a container class to hold a few regular expressions
+we will be using in the application:</p>
+
+<pre><code>module.exports = class RegExLibrary
+</code></pre>
+
+<h2 id="assoc-regex">assoc (RegEx)</h2>
+
+<p>This regular expresssion requires one or more lowercase letters
+it must start (^) and end ($) with any number of lowercase ([a-z])
+letters only</p>
+
+<pre><code>    @assoc: /^[a-z]+$/
+</code></pre>
+
+<h2 id="regionlanguage-regex">regionLanguage (RegEx)</h2>
+
+<p>This regular expression requires all letters to be lowercase, it
+must start with two ({2}) lowercase letters, followed by a dash '-'
+followed by two more lowercase letters.  This format matches region
+and language data parameters.</p>
+
+<pre><code>    @regionLanguage: /^[a-z]{2}-[a-z]{2}$/
+</code></pre>
+
+<h2 id="controller-regex">controller (RegEx)</h2>
+
+<p>This regulars expression must start and end (^ $) with lowercase
+strings greater than two characters and no longer than 255 characters,
+seperated by a dash '-'.  This format matches a the page controller
+data parameters.</p>
+
+<pre><code>    @controller: /^[a-z]{3, 255}-[a-z]{3, 255}$/
+</code></pre></div></div></div></div></body></html>

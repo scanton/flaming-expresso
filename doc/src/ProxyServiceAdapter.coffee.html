@@ -1,0 +1,32 @@
+<!DOCTYPE html><html lang="en"><head><title>src/ProxyServiceAdapter.coffee</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../"><meta name="groc-document-path" content="src/ProxyServiceAdapter.coffee"><meta name="groc-project-path" content="src/ProxyServiceAdapter.coffee.md"><link rel="stylesheet" type="text/css" media="all" href="../assets/style.css"><script type="text/javascript" src="../assets/behavior.js"></script><body><div id="meta"><div class="file-path">src/ProxyServiceAdapter.coffee.md</div></div><div id="document"><div class="segment"><div class="comments"><div class="wrapper"><h1 id="proxyserviceadapterclasslitcoffeelogohttpsrawgithubcomscantonflamingexpressomasterpublicimageslitcoffeeiconpng">ProxyServiceAdapter (class) <img src="https://raw.github.com/scanton/flaming-expresso/master/public/images/litCoffee-icon.png" alt="litCoffee Logo" title="" /></h1>
+
+<p>This class is used to mock up data access methods during testing</p>
+
+<pre><code>module.exports = class ProxyServiceAdapter
+
+    constructor: () -&gt;
+</code></pre>
+
+<h2 id="getassoc">getAssoc</h2>
+
+<p>This method queries a web service to get associate replicated website
+data.  The query is matched against the "WebSite_File" parameter coming
+back from the service.</p>
+
+<pre><code>    @getAssoc: (query) -&gt;
+        if query == "satori"
+            data =
+                Pinno: "1161918"
+                WebSite_File:"satori"
+                Name_Line:"User's Name"
+                Address_Line1:"User's address"
+                Address_Line2:{}
+                Address_Line3: {}
+                Address_Line4: {}
+                Fax: {}
+                e_mail: "no-reply@tempuri.com"
+                Phone: {}
+                LP_Website_Associate: "123456"
+                CreateDate: "2013-02-12T11:14:17.027-06:00"
+            return data
+</code></pre></div></div></div></div></body></html>
