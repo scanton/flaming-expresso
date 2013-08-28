@@ -1,4 +1,4 @@
-#ProxyServiceAdapter
+#ProxyServiceAdapter (class) ![litCoffee Logo](https://raw.github.com/scanton/flaming-expresso/master/public/images/litCoffee-icon.png)
 This class is used to mock up data access methods during testing
 
 	module.exports = class ProxyServiceAdapter

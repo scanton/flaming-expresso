@@ -1,0 +1,4 @@
+{
+  "glob": ["**/*.litcoffee", "**/*.coffee", "**/*.coffee.md", "README.md", "styles/*/*.styl", "views/*/*.jade"],
+  "github": true
+}

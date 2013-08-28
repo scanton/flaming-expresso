@@ -169,18 +169,29 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "type": "heading",
               "data": {
                 "level": 2,
-                "title": "Route all requests to 'index'",
-                "slug": "route-all-requests-to-index"
+                "title": "Port(get)",
+                "slug": "portget"
               },
               "depth": 2
             }, {
               "type": "heading",
               "data": {
                 "level": 2,
-                "title": "Port(get)",
-                "slug": "portget"
+                "title": "Respond to all requests (no 404)",
+                "slug": "respond-to-all-requests-no-404"
               },
-              "depth": 2
+              "depth": 2,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 4,
+                    "title": "Custom Routing",
+                    "slug": "custom-routing"
+                  },
+                  "depth": 4
+                }
+              ]
             }
           ]
         }, {
@@ -215,8 +226,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
     }, {
       "type": "folder",
       "data": {
-        "path": "src",
-        "title": "src"
+        "path": "client",
+        "title": "client"
       },
       "depth": 1,
       "children": [
@@ -228,10 +239,10 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "commentsOnly": true,
               "name": "Markdown"
             },
-            "sourcePath": "/Users/satoricanton/flaming-expresso/src/main-client.coffee.md",
-            "projectPath": "src/main-client.coffee.md",
-            "targetPath": "src/main-client.coffee",
-            "title": "main-client.coffee"
+            "sourcePath": "/Users/satoricanton/flaming-expresso/client/app-client.coffee.md",
+            "projectPath": "client/app-client.coffee.md",
+            "targetPath": "client/app-client.coffee",
+            "title": "app-client.coffee"
           },
           "depth": 2,
           "outline": [
@@ -321,6 +332,126 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                 "slug": "jquery"
               },
               "depth": 1
+            }
+          ]
+        }
+      ]
+    }, {
+      "type": "folder",
+      "data": {
+        "path": "src",
+        "title": "src"
+      },
+      "depth": 1,
+      "children": [
+        {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [".md"],
+              "commentsOnly": true,
+              "name": "Markdown"
+            },
+            "sourcePath": "/Users/satoricanton/flaming-expresso/src/ProxyServiceAdapter.coffee.md",
+            "projectPath": "src/ProxyServiceAdapter.coffee.md",
+            "targetPath": "src/ProxyServiceAdapter.coffee",
+            "title": "ProxyServiceAdapter.coffee"
+          },
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 2,
+                "title": "getAssoc",
+                "slug": "getassoc"
+              },
+              "depth": 2
+            }
+          ]
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [".md"],
+              "commentsOnly": true,
+              "name": "Markdown"
+            },
+            "sourcePath": "/Users/satoricanton/flaming-expresso/src/RegExLibrary.coffee.md",
+            "projectPath": "src/RegExLibrary.coffee.md",
+            "targetPath": "src/RegExLibrary.coffee",
+            "title": "RegExLibrary.coffee"
+          },
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 2,
+                "title": "assoc (RegEx)",
+                "slug": "assoc-regex"
+              },
+              "depth": 2
+            }, {
+              "type": "heading",
+              "data": {
+                "level": 2,
+                "title": "regionLanguage (RegEx)",
+                "slug": "regionlanguage-regex"
+              },
+              "depth": 2
+            }, {
+              "type": "heading",
+              "data": {
+                "level": 2,
+                "title": "controller (RegEx)",
+                "slug": "controller-regex"
+              },
+              "depth": 2
+            }
+          ]
+        }, {
+          "type": "file",
+          "data": {
+            "language": {
+              "nameMatchers": [".md"],
+              "commentsOnly": true,
+              "name": "Markdown"
+            },
+            "sourcePath": "/Users/satoricanton/flaming-expresso/src/RouteUtils.coffee.md",
+            "projectPath": "src/RouteUtils.coffee.md",
+            "targetPath": "src/RouteUtils.coffee",
+            "title": "RouteUtils.coffee"
+          },
+          "depth": 2,
+          "outline": [
+            {
+              "type": "heading",
+              "data": {
+                "level": 2,
+                "title": "constructor",
+                "slug": "constructor"
+              },
+              "depth": 2
+            }, {
+              "type": "heading",
+              "data": {
+                "level": 1,
+                "title": "init",
+                "slug": "init"
+              },
+              "depth": 1,
+              "children": [
+                {
+                  "type": "heading",
+                  "data": {
+                    "level": 2,
+                    "title": "getLink",
+                    "slug": "getlink"
+                  },
+                  "depth": 2
+                }
+              ]
             }
           ]
         }

@@ -1,4 +1,4 @@
-#RegExLibrary
+#RegExLibrary (class) ![litCoffee Logo](https://raw.github.com/scanton/flaming-expresso/master/public/images/litCoffee-icon.png)
 
 This is just a container class to hold a few regular expressions
 we will be using in the application:

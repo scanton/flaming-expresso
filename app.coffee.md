@@ -63,7 +63,7 @@ this application.
 ##Web Basics
 Instruct the app to use some basic webserver functionality
 
-	app.use express.favicon()
+	app.use express.favicon(__dirname + '/public/favicon.ico')
 	app.use express.responseTime()
 	app.use express.bodyParser()
 	app.use express.methodOverride()

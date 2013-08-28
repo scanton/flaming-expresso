@@ -1,4 +1,4 @@
-#RouteUtils
+#RouteUtils (class) ![litCoffee Logo](https://raw.github.com/scanton/flaming-expresso/master/public/images/litCoffee-icon.png)
 
 Since we have some extra requirements for our routing system,
 we are not replacing the Express router (it is used by other parts)
