@@ -4,7 +4,8 @@
     "tagline": "written in litCoffee",
     "db_host": "localhost",
     "db_user": "root",
-    "db_pass": "root"
+    "db_pass": "root",
+    "port": 3000
   },
 
   "production": {
@@ -12,6 +13,7 @@
     "tagline": "written by litCoffee.org",
     "db_host": "dbhost",
     "db_user": "dbuser",
-    "db_pass": "d69455"
+    "db_pass": "d69455",
+    "port": 80
   }
 }

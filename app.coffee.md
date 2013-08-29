@@ -9,6 +9,10 @@ up the web server and defines routes.
 external package requirements are defined in package.json
 in this same root directory
 
+##Debugger (dbug)
+
+When running this application in a development environment, the Debugger will be available as a hookpoint to funnel logging and debugging requests to either the log, console, the socket, or the console on the client via the socket.
+
 ##HTTP
 Http provides http protocol api
 
@@ -41,11 +45,22 @@ database connections, or WSDLs based on the specific environment
 
 	config = require('./config.json')[app.get('env')]
 
+####Debug message types
+There are thee 'types' or 'scopes' that a debug message can take, depending on where the developer wants to view the debug output.  They are:
+
+* **file**
+* **console**
+* **socket**
+* **client**
+
+	if 'development' == app.get('env')
+		Debugger = require __dirname + '/src/Debugger'
+
 ##Port(set)
 If no environment variable *PORT* is defined, then we listen
 to port 3000 by default.
 
-	app.set 'port', process.env.PORT || 3000
+	app.set 'port', config.port || process.env.PORT || 3000
 
 ##Views
 The app will look for views in a folder called */views*

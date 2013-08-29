@@ -10,7 +10,3 @@ written in [Literate CoffeeScript](http://coffeescript.org/)
 ###How to run coffee under [node-inspector](https://github.com/node-inspector/node-inspector):
 
 	coffee --nodejs --debug app.coffee.md
-
-###How to [groc](https://github.com/nevir/groc):
-
-	groc "**/*.coffee.md"

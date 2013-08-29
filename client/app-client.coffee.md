@@ -33,7 +33,8 @@ a string that is HTML encoded.
 		return $('<div/>').html(value).text()
 
 #Web Socket events
-##onConnect
+
+##onConnect (event)
 onConnect is triggered when the cliet successfully connects to the FlamingExpresso
 server.  All we are doing is outputting the data sent to the onConnect event to
 the console.  We then append the chat history showing the user that they have connected
@@ -44,7 +45,7 @@ to a chat session.
 		$("#chat-history").append "<p class='on-connect'><span class='message'> #{htmlEncode(data.message)}:</span> #{data.date}</p>"
 		socket.emit 'onConnect', wrapMessage('client connected:')
 
-##updateChat
+##updateChat (event)
 updateChat is triggered when a user sends a new message to a chat session.  We determine
 if the update came from the current user and then update the chatHistory div by appending
 the new message to the view.  Finally, we scroll the chatHistory to the bottom of the page
@@ -56,7 +57,7 @@ showing the most recent messages at the bottom.
 		$chatHistory.append "<p class='chat'><span class='username #{self}'>#{htmlEncode(data.username)}</span>: #{htmlEncode(data.message)}</p>"
 		$chatHistory.scrollTop $chatHistory[0].scrollHeight
 
-##newUser
+##newUser (event)
 newUser is triggered when a new user connects to a chat session.
 
 We update the chatHistory to let everyone know that the new user has joined the
@@ -72,6 +73,12 @@ form and display the chat views.
 			$("#authenticate").hide 'slow'
 			$("#chat").show 'slow'
 			$("#chat-input").focus()
+
+##debug (event)
+debug is triggered when the socket server is driggered by the server side Debugger
+
+	socket.on 'debug', (data) ->
+		console.log data
 
 #jQuery
 *$ ->* is the jQuery **$(document).ready()** event handler.  When the document has
