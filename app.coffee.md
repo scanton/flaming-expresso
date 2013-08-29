@@ -48,10 +48,10 @@ database connections, or WSDLs based on the specific environment
 ####Debug message types
 There are thee 'types' or 'scopes' that a debug message can take, depending on where the developer wants to view the debug output.  They are:
 
-* **file**
-* **console**
-* **socket**
-* **client**
+* *file*
+* *console*
+* *socket*
+* *client*
 
 	if 'development' == app.get('env')
 		Debugger = require __dirname + '/src/Debugger'
