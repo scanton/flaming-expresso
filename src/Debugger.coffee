@@ -1,12 +1,8 @@
 module.exports = class Debugger
-
-	@io = null
-
-	constructor: () ->
-
+	constructor: (@io = null) ->
 	@log: (obj) ->
 		if @io
-			@io.sockets.emit 'debug', obj
-		console.log '\n\n*********\n'
+			@io.sockets.emit 'debug', data: obj
 		console.log obj
-		console.log '\n\n'
+	@setIo: (@io) ->
+	@getIo: -> @io

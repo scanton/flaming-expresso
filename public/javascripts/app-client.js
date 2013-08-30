@@ -4,6 +4,8 @@
 
   socket = io.connect('http://localhost:3000');
 
+  window.socket = socket;
+
   wrapMessage = function(str) {
     return {
       message: str

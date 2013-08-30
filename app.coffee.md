@@ -171,11 +171,20 @@ web server.
 
 	io = require('socket.io').listen server
 
+####Debugger
+If we're in development, we want to give the Debugger a reference to
+our socket *io*
+
+	if 'development' == app.get('env') && Debugger && io
+		Debugger.setIo io
+
 ###Socket events
 We then register to listen for the *connection* event and define our
 event handlers for an individual socket
 
 	io.sockets.on 'connection', (socket) ->
+		if Debugger
+			Debugger.log '**WebSocket Debugger Enabled**'
 		soc = socket
 		d = new Date();
 		soc.emit 'onConnect', 
