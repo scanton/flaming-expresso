@@ -6,6 +6,10 @@
 
   window.socket = socket;
 
+  window.trace = function(obj) {
+    return socket.emit('debug', obj);
+  };
+
   wrapMessage = function(str) {
     return {
       message: str

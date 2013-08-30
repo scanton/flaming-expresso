@@ -6,7 +6,16 @@ This is the main application bootstraping on the client side.
 We start by defining our web socket connection *socket*.  This URL should be edited to match the location/port of your FlamingExpresso server.
 
 	socket = io.connect 'http://localhost:3000'
+
+Make the socket available globally to the application by attaching it to the window.
+
 	window.socket = socket
+
+#trace (socket.io tracer) global
+Make a shortcut to socket.io debugging.
+
+	window.trace = (obj) ->
+		socket.emit 'debug', obj
 
 ##helper functions
 These are a few utility functons that are used later in this file:
@@ -63,7 +72,7 @@ We update the chatHistory to let everyone know that the new user has joined the 
 			$("#chat-input").focus()
 
 ##debug (event)
-debug is triggered when the socket server is driggered by the server side Debugger
+debug is triggered when the socket server is triggered by the server side Debugger
 
 	socket.on 'debug', (data) ->
 		console.log data

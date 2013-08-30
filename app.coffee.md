@@ -183,10 +183,12 @@ We then register to listen for the *connection* event and define our
 event handlers for an individual socket
 
 	io.sockets.on 'connection', (socket) ->
-		if Debugger
-			Debugger.log '**WebSocket Debugger Enabled**'
 		soc = socket
 		d = new Date();
+		if Debugger
+			Debugger.log '**WebSocket Debugger Enabled**'
+			soc.on 'debug', (data) ->
+				Debugger.log data
 		soc.emit 'onConnect', 
 			message: "Connected to #{config.title}"
 			date: d.toString()

@@ -1,6 +1,6 @@
-Fri, 30 Aug 2013 03:06:00 GMT 127.0.0.1 GET / 200
-Fri, 30 Aug 2013 03:06:00 GMT 127.0.0.1 GET /javascripts/socket.io.js 304
-Fri, 30 Aug 2013 03:06:00 GMT 127.0.0.1 GET /javascripts/app-client.js 304
-Fri, 30 Aug 2013 03:06:00 GMT 127.0.0.1 GET /stylesheets/style.css 304
-Fri, 30 Aug 2013 03:06:00 GMT 127.0.0.1 GET /images/litCoffee-icon.png 304
-Fri, 30 Aug 2013 03:06:00 GMT 127.0.0.1 GET /javascripts/app-client.map 304
+Fri, 30 Aug 2013 05:02:54 GMT 127.0.0.1 GET / 200
+Fri, 30 Aug 2013 05:02:55 GMT 127.0.0.1 GET /javascripts/socket.io.js 304
+Fri, 30 Aug 2013 05:02:55 GMT 127.0.0.1 GET /stylesheets/style.css 304
+Fri, 30 Aug 2013 05:02:55 GMT 127.0.0.1 GET /javascripts/app-client.js 200
+Fri, 30 Aug 2013 05:02:55 GMT 127.0.0.1 GET /images/litCoffee-icon.png 304
+Fri, 30 Aug 2013 05:02:55 GMT 127.0.0.1 GET /javascripts/app-client.map 200

@@ -42,7 +42,7 @@ We set up some inital properties that we will use in this class
 			@argIndex = 0
 			@linkPath = []
 			@args = []
-			@path = @req.path.split '/'
+			@path = @req.path.toLowerCase().split '/'
 
 In most cases, the first item in this list will always be an empty
 string.  If it is, we shift it out of the array to keep from dealing
